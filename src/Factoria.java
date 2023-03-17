@@ -3,6 +3,7 @@ import libreriapedirdatos.LibreriaPedirDatos;
 import Transportes.Camiones;
 import Transportes.ITransportes;
 import Transportes.Bicicleta;
+import Transportes.Barco;
 
 
 /**
@@ -12,6 +13,7 @@ import Transportes.Bicicleta;
 public class Factoria {
     public static final int CAMION = 1;
     public static final int BICICLETA = 2;
+    public static final int BARCO = 3;
     public static Integer cp = null;
     public static Float dimensionX = null;
     public static Float dimensionY = null;
@@ -35,6 +37,10 @@ public class Factoria {
             // tipo ventana
             case BICICLETA:
                 return new Bicicleta(cp, dimensionX, dimensionY, dimensionZ, peso);
+            // tipo barco
+            case BARCO:
+                return new Barco(cp, dimensionX, dimensionY, dimensionZ, peso);
+
             // otro tipo
             default:
                 return null;
